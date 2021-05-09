@@ -1,0 +1,28 @@
+
+
+<ul>
+    {% for jfolder in all_json_folders %}
+    <li><a herf="/jsonfolders/{{ jfolder.id }}"> {{ jfolder.title}} </a></li>
+    <li><a herf="/jsonfolders/{{ jfolder.id }}"> {{ jfolder.description}} </a></li>
+    {% endfor %}
+</ul>
+
+<form method="POST" action="/data">
+    <!-- I want to make the post to the other url -->
+    {% csrf_token %}
+    <input type="file" id="fileupload" accept="application/json" />
+    <input type="hidden" name="data" id="data" />  
+    <!-- to send the data to backend we need a hidden input.so we use "data" as input -->
+    <button type="submit">Submit</button>
+</form>
+<script>
+    document.getElementById("fileupload").onchange = function(e) {
+        var file = e.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function() {
+            console.log(reader.result);
+            document.getElementById("data").value = reader.result
+        }
+        reader.readAsBinaryString(file);
+    }
+</script>

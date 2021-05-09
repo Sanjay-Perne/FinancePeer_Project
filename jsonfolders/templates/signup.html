@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <p className="text-muted" style="color: black; text-align: center; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 30px;">
+    SIGN UP FOR A NEW ACCOUNT
+  </p>
+</head>
+<style>
+  body {
+    background-image: url('sunny.jpg');
+  }
+  </style>
+<body>
+        
+<section className="hey">
+                  
+                                  
+
+                                <div className="p-3">
+                                  <form method="POST" style="text-align: center;">
+                                    {% csrf_token %}
+                                    <div className="form-group" >
+                                      <label for="name">Name</label>
+                                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+
+
+
+                                      <input
+                                        type="text"
+                                        className="form-control"
+                                        id="firstname"
+                                        placeholder="First Name"
+                                        name="first_name"
+                                      />
+                                    </div>
+<br>
+                                    <div className="form-group" >
+                                      <label for="username">User Name</label>
+                                      <input
+                                        type="text"
+                                        className="form-control"
+                                        id="firstname"
+                                        placeholder="First Name"
+                                        name="username"
+                                      />
+                                    </div>
+<br>
+                                    <div className="form-group">
+                                      <label for="email">Email</label>
+                                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                      <input
+                                        type="text"
+                                        className="form-control"
+                                        id="email"
+                                        placeholder="Enter Email"
+                                        name="email"
+                                      />
+                                    </div>
+<br>
+        
+                                    <div className="form-group">
+                                      <label for="userpassword">Password</label>
+                                       &nbsp&nbsp
+                                      <input
+                                        type="password"
+                                        className="form-control"
+                                        id="userpassword"
+                                        placeholder="Enter password"
+                                        name="password"
+                                      />
+                                    </div>
+<br>
+        
+                                    <div className="custom-control custom-checkbox">
+                                      <input
+                                        type="checkbox"
+                                        className="custom-control-input"
+                                        id="customControlInline"
+                                      />
+                                      <label
+                                        className="custom-control-label"
+                                        for="customControlInline"
+                                      >
+                                        Remember me
+                                      </label>
+                                    </div>
+        <br>
+                                    <div className="mt-3">
+                                      <button
+                                        type="submit"
+                                        className="btn btn-custom btn-block"
+                                      >
+                                        Sign up
+                                      </button>
+                                    </div>
+        <br>
+                                    <div className="mt-4 mb-0 text-center">
+                                      <p className="mb-0">
+                                        Already have an account ?
+                                        <Link to="login" className="text-danger">
+                                          Sign in
+                                        </Link>
+                                      </p>
+                                    </div>
+                                  </form>
+                                
+</section>
+</body>        
+</html>

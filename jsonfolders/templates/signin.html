@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+  body {
+    background-image: url('sunny.jpg');
+  }
+  </style>
+<body style="text-align: center;">
+
+
+        <section className="hello">
+
+                          <p className="text-muted" style="color: black; text-align: center; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size:30px;">
+                            SIGN IN TO CONTINUE
+                          </p>
+
+                        <div className="p-3">
+                          <form method="POST">
+                            {% csrf_token %} 
+
+                            <div className="form-group">
+                              <label for="username">Username</label>
+                              <input
+                                type="text"
+                                className="form-control"
+                                id="username"
+                                placeholder="Enter username"
+                                name="username"
+                              />
+                            </div>
+<br>
+
+                            <div className="form-group">
+                              <label for="userpassword">Password</label>
+                              <input
+                                type="password"
+                                className="form-control"
+                                id="userpassword"
+                                placeholder="Enter password"
+                                name="password"
+                              />
+                            </div>
+
+                          
+<br>
+                            <div className="mt-3">
+                              <button
+                                type="submit"
+                                className="btn btn-custom btn-block"
+                              >
+                                Log In
+                              </button>
+                            </div>
+
+                        
+                          </form>
+              
+        
+        </section>
+      </body>
+        </html>
